@@ -6,7 +6,7 @@ namespace RealEstate.Types.Property
 {
     public class PropertyType : ObjectGraphType<Database.Models.Property>
     {
-        public PropertyType(IPaymentRepository paymentRepository)
+        public PropertyType(IPaymentRepository paymentRepository, IBillRepository billRepository)
         {
             Field(x => x.Id);
             Field(x => x.Name);
@@ -22,6 +22,16 @@ namespace RealEstate.Types.Property
                     return lastItemsFilter != null
                         ? paymentRepository.GetAllForProperty(context.Source.Id, lastItemsFilter.Value)
                         : paymentRepository.GetAllForProperty(context.Source.Id);
+                });
+
+            Field<ListGraphType<BillType>>("bills",
+                arguments: new QueryArguments(new QueryArgument<IntGraphType> { Name = "last" }),
+                resolve: context =>
+                {
+                    var lastItemsFilter = context.GetArgument<int?>("last");
+                    return lastItemsFilter != null
+                        ? billRepository.GetAllForProperty(context.Source.Id, lastItemsFilter.Value)
+                        : billRepository.GetAllForProperty(context.Source.Id);
                 });
         }
     }

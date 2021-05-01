@@ -43,6 +43,34 @@ namespace RealEstate.Database
                                 Paid = false,
                                 Value = 1500
                             }
+                        },
+
+                        Bills = new List<Bill>
+                        {
+                            new Bill
+                            {
+                                Name = "Water",
+                                DateCreated = new DateTime(2019, 07, 01),
+                                DateOverdue = new DateTime(2019, 07, 15),
+                                Paid = true,
+                                Value = 50
+                            },
+                            new Bill
+                            {
+                                Name = "Energy",
+                                DateCreated = new DateTime(2019, 08, 01),
+                                DateOverdue = new DateTime(2019, 08, 15),
+                                Paid = true,
+                                Value = 100
+                            },
+                            new Bill
+                            {
+                                Name = "Cable",
+                                DateCreated = new DateTime(2019, 09, 01),
+                                DateOverdue = new DateTime(2019, 09, 15),
+                                Paid = false,
+                                Value = 150
+                            }
                         }
                     },
                     new Property
@@ -75,6 +103,34 @@ namespace RealEstate.Database
                                 Paid = false,
                                 Value = 3000
                             }
+                        },
+
+                        Bills = new List<Bill>
+                        {
+                            new Bill
+                            {
+                                Name = "Water",
+                                DateCreated = new DateTime(2019, 07, 01),
+                                DateOverdue = new DateTime(2019, 07, 15),
+                                Paid = true,
+                                Value = 50
+                            },
+                            new Bill
+                            {
+                                Name = "Energy",
+                                DateCreated = new DateTime(2019, 08, 01),
+                                DateOverdue = new DateTime(2019, 08, 15),
+                                Paid = true,
+                                Value = 100
+                            },
+                            new Bill
+                            {
+                                Name = "Cable",
+                                DateCreated = new DateTime(2019, 09, 01),
+                                DateOverdue = new DateTime(2019, 09, 15),
+                                Paid = false,
+                                Value = 150
+                            }
                         }
                     },
                     new Property
@@ -106,6 +162,34 @@ namespace RealEstate.Database
                                 DateOverdue = new DateTime(2019, 09, 15),
                                 Paid = true,
                                 Value = 800
+                            }
+                        },
+
+                        Bills = new List<Bill>
+                        {
+                            new Bill
+                            {
+                                Name = "Water",
+                                DateCreated = new DateTime(2019, 07, 01),
+                                DateOverdue = new DateTime(2019, 07, 15),
+                                Paid = true,
+                                Value = 50
+                            },
+                            new Bill
+                            {
+                                Name = "Energy",
+                                DateCreated = new DateTime(2019, 08, 01),
+                                DateOverdue = new DateTime(2019, 08, 15),
+                                Paid = true,
+                                Value = 100
+                            },
+                            new Bill
+                            {
+                                Name = "Cable",
+                                DateCreated = new DateTime(2019, 09, 01),
+                                DateOverdue = new DateTime(2019, 09, 15),
+                                Paid = false,
+                                Value = 150
                             }
                         }
                     }

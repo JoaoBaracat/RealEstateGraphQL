@@ -11,5 +11,6 @@ namespace RealEstate.Database.Models
         public decimal Value { get; set; }
         public string Family { get; set; }
         public ICollection<Payment> Payments { get; set; }
+        public ICollection<Bill> Bills { get; set; }
     }
 }

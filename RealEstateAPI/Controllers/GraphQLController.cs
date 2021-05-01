@@ -46,5 +46,36 @@ namespace RealEstate.API.Controllers
 
             return Ok(result);
         }
+
+
+        //{
+        //property(id:7)
+        //      {
+        //          id
+        //          name
+
+
+        //  payments(last: 1){
+        //              id
+        //              value
+        //     dateCreated
+        //   }
+        //      }
+        //  }
+
+
+
+        //Input
+  //      mutation($property:PropertyInput!)
+  //      {
+  //          addProperty(property: $property){
+  //              id
+  //              name
+          
+
+  //}
+  //      }
+
+
     }
 }

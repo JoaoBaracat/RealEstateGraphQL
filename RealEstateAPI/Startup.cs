@@ -33,6 +33,7 @@ namespace RealEstate.API
 
             services.AddTransient<IPropertyRepository, PropertyRepository>();
             services.AddTransient<IPaymentRepository, PaymentRepository>();
+            services.AddTransient<IBillRepository, BillRepository>();
 
             services.AddDbContext<RealEstateContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RealEstateDb"]));
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
@@ -41,6 +42,7 @@ namespace RealEstate.API
             services.AddSingleton<PropertyType>();
             services.AddSingleton<PropertyInputType>();
             services.AddSingleton<PaymentType>();
+            services.AddSingleton<BillType>();
             var sp = services.BuildServiceProvider();
             services.AddSingleton<ISchema>(new RealEstateSchema(new FuncDependencyResolver(type => sp.GetService(type))));
         }

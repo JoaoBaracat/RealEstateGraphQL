@@ -16,5 +16,6 @@ namespace RealEstate.Database
 
         public DbSet<Property> Properties { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Bill> Bills { get; set; }
     }
 }
